@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>向上下左右不间断无缝滚动图片的效果(兼容火狐和IE)- www.codefans.net</title>
+</head>
+<body>
+
+
+<!--下面是向左滚动代码-->
+<div id="colee" style="overflow:hidden;">
+<table>
+	<tr>
+		<td id="colee1">
+			<table>
+				<tr >
+					<td><p><img src="./images/huoguo.jpg"></p></td>
+					<td><p><img src="./images/huoguo_1.jpg"></p></td>
+					<td><p><img src="./images/huoguo_2.jpg"></p></td>
+					<td><p><img src="./images/huoguo_3.jpg"></p></td>
+					<td><p><img src="./images/huoguo_4.jpg"></p></td>
+				</tr>
+			</table>
+		</td>
+		<td id="colee2"></td>
+	</tr>
+</table>
+</div>
+<script>
+//使用div时，请保证colee_left2与colee_left1是在同一行上.
+var speed=10//速度数值越大速度越慢,毫秒计
+var colee2=document.getElementById("colee2");
+var colee1=document.getElementById("colee1");
+var colee=document.getElementById("colee");
+colee2.innerHTML=colee1.innerHTML
+function Marquee3(){
+if(colee1.offsetWidth-colee.scrollLeft<=0)//offsetWidth 是对象的可见宽度
+colee.scrollLeft-=colee1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
+else{
+colee.scrollLeft++
+}
+}
+var MyMar3=setInterval(Marquee3,speed)
+colee.onmouseover=function() {clearInterval(MyMar3)}
+colee.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
+</script>
+</body>
+</html>
