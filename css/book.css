@@ -1,0 +1,523 @@
+body,html {
+  width: 100%;
+  overflow: hidden;
+  background-size:100%;
+  background-image: url(../images/background2.jpg);
+}
+
+ header nav {
+  background-color: #d9eeff;
+  width: 20%;
+  position: relative;
+  top: 0;
+  left: 37%;
+}
+
+header nav ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+header nav li {
+  display: inline;
+  margin: 0;
+  border: 0;
+  width: 20%;
+}
+
+header nav li a {
+  font-size: 100%;
+  padding: 1%;
+  font-size: 20px;
+  font-weight:bold;
+  text-align:center;
+  border-left: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+
+header a:hover,header a:active {
+  background-color: #f5ee0d;
+}
+
+header nav ul > li.home > a {
+  border-left: none;
+}
+
+/*定义书本样式*/
+#book {
+  /*设置大小*/
+  width: 500px;
+  height: 500px;
+  /*定位*/
+  position: absolute;
+  top: -3%;
+  left: 50%;
+  /*perspective设置镜头到元素平面的距离*/
+  -webkit-perspective: 2500px;
+  -moz-perspective: 2500px;
+  perspective: 2500px;
+  /*开3D效果*/
+  -webkit-transform-style: preserve-3d; /* Safari 和 Chrome */
+  -moz-transform-style: preserve-3d;  /* Firefox */
+  transform-style: preserve-3d;
+  /*倾斜*/
+  transform:rotate(-2.5deg);
+}
+
+.cover_front:hover {
+  transform:scale(1.1,1.1); /*放大书*/
+}
+
+.front {
+  /*设定旋转中心*/
+  transform-origin: 0% 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+}
+
+.back {
+  transform-origin: 100% 50%;
+  /*旋转180°*/
+  transform:rotateY(180deg);
+  position: absolute;
+  top: 0%;
+  left: -100%;
+
+}
+
+
+.front, .back {
+  width: 500px;
+  height: 500px;
+  background-color: #97b2c7;
+  border: 2px solid #afafaf;
+  /*定义旋转时间*/
+  transition: 0.6s;
+  /*不显示背面*/
+  backface-visibility: hidden;
+}
+
+
+/*前封面*/
+h1 {
+  margin: 0%;
+  font-family: 方正舒体,华文新魏,华文行楷,Arial Unicode MS;
+  font-size: 550%;
+  color: #242f2d;
+  text-shadow: 3px 3px 1px #f5efd7;
+  background: #acc6da;
+}
+
+div.cover_front {
+  text-align: center;
+  background-image: url(../images/cover_img.jpg);
+}
+
+div.cover_front > img {
+  height: 500px;
+  position: absolute;
+  top: 0%;
+  left: 3%;
+}
+
+/*前封面背页*/
+div.cover_back > div {
+  margin: 3%;
+  padding: 3%;
+  height: 90%;
+  background-color: #ffffd9;
+  overflow: hidden;
+}
+
+div.cover_back > div > img {
+  margin: 3%;
+  float: left;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0%;
+}
+
+section > p {
+  text-indent: 2em;
+  margin: 0% 3%;
+}
+
+/*
+*内容
+*/
+h2 {
+  text-align: center;
+  font-family: 华文行楷,华文新魏,方正舒体,Arial Unicode MS;
+  font-size: 50px;
+  margin-bottom: 0%;
+  margin-top: 5%;
+}
+
+#pages > div > div {
+  background-color: #ffffd9;
+  overflow: hidden;
+  width: 90%;
+  height: 99%;
+  padding: 0% 5%;
+}
+
+.front > hr,.back > hr {
+  border-top: 4px double rgba(121, 70, 56, 0.43);
+  text-align: center;
+  margin: 0%;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.front > hr:after,.back > hr:after {
+  content: '\002665';
+  position: relative;
+  top: -15px;
+  color: #b15b5b;
+}
+
+div {
+  margin: 5% 0%;
+}
+
+section img {
+  margin: 1%;
+}
+
+
+/*第一张内容页*/
+/*第一页*/
+div.front > ul {
+  list-style-type: cjk-ideographic;
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+li {
+  line-height: 2em;
+}
+
+ul.menu ul {
+  list-style-type: disc;
+}
+
+/*第二页*/
+h3.dazu {
+  writing-mode: vertical-lr;
+  vertical-align: middle;
+  display: inline;
+  font-family: 华文楷体,楷体,DFKai-SB;
+  font-size: 200%;
+  margin: 3%;
+}
+
+h3.dazu + img {
+  vertical-align: middle;
+}
+
+/*第二张内容页*/
+/*第三、四页*/
+div.page_two  section.dazu {
+  padding: 0% 5% 3%;
+  border: 2px dashed yellow;
+}
+
+div.page_two  h4 {
+  display: inline-block;
+  background-color: grey;
+  color: yellow;
+  margin-top: 10%; 
+}
+
+img[src="./images/dazu_1.jpg"] {
+  float: right;
+}
+
+img[src="./images/dazu_2.jpg"] {
+  float: left;
+}
+
+
+/*第三张内容页*/
+/*第五页*/
+div.page_three  section.dazu {
+  padding: 0% 5% 3%;
+  border: 2px dashed yellow;
+}
+
+img[src="./images/dazu_5.jpg"] {
+  float: right;
+}
+
+/*第六页*/
+p.notice {
+  width: 30%;
+  background-color: yellow;
+  color: red;
+  float: right;
+  margin-top: 3%;
+  border: 1px dotted #b5d0e6; 
+}
+
+div.page_three  h4 {
+  display: inline-block;
+  background-color: grey;
+  color: yellow;
+  margin: 2%; 
+}
+
+div.page_three  h4 + ul {
+  margin: 0%;
+}
+
+h3.huahai {
+  writing-mode: vertical-lr;
+  vertical-align: middle;
+  display: inline;
+  font-family: 华文楷体,楷体,DFKai-SB;
+  font-size: 200%;
+  margin: 3%;
+}
+
+img[src="./images/huahai.jpg"] {
+  vertical-align: middle;
+}
+
+/*第四张内容页*/
+/*第七、八页*/
+div.page_four  h4 {
+  display: inline-block;
+  background-color: grey;
+  color: #f394a9;
+  margin: 2%; 
+}
+
+div.page_four section.huahai {
+  padding-bottom: 3%;
+  border: 2px dashed #d85f7a;
+}
+
+img[src="./images/huahai_1.jpg"] {
+  float: right;
+}
+
+/*第五张内容页*/
+/*第九、十页*/
+div.page_five section.meixin {
+  padding-bottom: 3%;
+  border: 2px dashed #2196F3;
+}
+
+h3.meixin {
+  font-family: 华文楷体,楷体,DFKai-SB;
+  font-size: 200%;
+  margin: 3%;
+}
+
+img[src="./images/meixin.jpg"] {
+  display: block;
+  margin:auto;
+}
+
+img[src="./images/meixin_3.jpg"] {
+  opacity:0.4;
+  filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+  transform:rotate(50deg);
+  position: absolute;
+  top: 10%;
+  left: 8%;
+}
+
+img[src="./images/meixin_5.jpg"] {
+  opacity: 0.3;
+  filter:alpha(opacity=30); /* 针对 IE8 以及更早的版本 */
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}
+
+img[src="./images/meixin_1.jpg"] {
+  opacity: 0.3;
+  filter:alpha(opacity=30); /* 针对 IE8 以及更早的版本 */
+  transform: rotate(-20deg);
+  position: absolute;
+  bottom: 12%;
+  left: 15%;
+}
+
+img[src="./images/meixin_6.jpg"] {
+  opacity: 0.4;
+  filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+  transform: rotate(10deg);
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+}
+
+div.page_five  h4 {
+  display: inline-block;
+  background-color: grey;
+  color: #aedff5;
+  margin: 2%; 
+}
+
+/*第六张内容页*/
+/*第十一、十二页*/
+
+h3.wushan {
+  font-family: 华文楷体,楷体,DFKai-SB;
+  font-size: 200%;
+  margin: 3%;
+}
+
+div.page_six section.wushan {
+  padding: 0% 5% 3%;
+  border: 2px dashed #4caf50;
+}
+
+div.page_six  h4 {
+  display: inline-block;
+  background-color: grey;
+  color: #76f779;
+  margin: 2%; 
+}
+
+img[src="./images/wushan_1.jpg"] {
+  position: absolute;
+  bottom: 25%;
+  right: 5%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+img[src="./images/wushan_2.jpg"] {
+  position: absolute;
+  bottom: 5%;
+  right: 15%; 
+  box-shadow: 10px 10px 5px #888888;
+}
+
+img[src="./images/wushan_3.jpg"] {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+/*第七张内容页*/
+/*第十三页*/
+div.page_six  h4.wushan {
+  display: inline-block;
+  background-color: grey;
+  color: #76f779;
+  margin: 2%; 
+}
+
+em {
+  display: block;
+  text-align: center;
+}
+
+div.page_seven section.wushan {
+  padding: 0% 5% 3%;
+  border: 2px dashed #4caf50;
+}
+
+img[src="./images/CQmap.jpg"]{
+  height: 70%;
+  display: block;
+  position: absolute;
+  left: 15%;  
+}
+
+em.minmap {
+  margin-top: 15%;
+}
+
+/*放大镜效果*/
+.min{
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+.max{
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  bottom: 25%;
+}
+.max img{
+  position: absolute;
+  margin: 0 auto;
+}
+.min img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.magnify {
+  width: 153.125px;
+  height: 153.125px;
+  background-color: skyblue;    
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+div.page_eight {
+  margin: 0%;
+}
+
+/*第十四页*/
+.subway img {
+  width: 100%;
+  height: 100%;
+}
+
+.subway em {
+  margin-top: 5%;
+}
+
+/*后封面*/
+div.backcover_back {
+  background-color: #8baccb;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.backcover_front p{
+  text-align: center;
+  vertical-align: middle;
+}
+
+a.return {
+  display:block;
+  font-weight:bold;
+  font-size:20px;
+  color:#FFFFFF;
+  background-color:#9e9e9e;
+  width:120px;
+  text-align:center;
+  padding:4px;
+  text-decoration:none;
+  position: relative;
+  top: 50%;
+  left: 40%;
+}
+
+a.return:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+  background-color: #756e6e;
+  border: 2px solid #ffffff;
+}

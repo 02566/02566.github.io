@@ -1,0 +1,78 @@
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: -10%;
+  width: 600px;
+  height: 600px;
+  background: #FDF3F3;
+  transition:1s;
+}
+
+.big-heart-2{
+  position: absolute;
+  top: 65%;
+  left: 43%;
+  width: 8%;
+  height: 11%;
+  background: #F07D7E;
+  border-radius: 30px 30px 0px 0px;
+  transform: rotate(-55deg);
+  animation: heart 1s infinite;
+}
+
+.big-heart-1{
+  position: absolute;
+  top: 65%;
+  left: 47%;
+  width: 8%;
+  height: 11%;
+  background: #F07D7E;
+  border-radius: 30px 30px 0px 0px;
+  transform: rotate(55deg);
+  animation: heart 1s infinite;
+}
+
+
+@keyframes heart{
+  0%{
+    
+  }
+  50%{
+    width: 11%;
+   height: 13%;
+  }
+  100%{
+    
+  }
+}
+
+#txt {
+  margin: auto;
+  position: relative;
+  top: 67% ;
+  left: 49%;
+  color: #F07D7E;
+  font-size: 50px;
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  color: #ffffff;
+  font-size: 15px;
+  animation: p 1s infinite;
+}
+
+@keyframes p{
+  0%{
+    
+  }
+  50%{
+  font-size: 25px;
+  }
+  100%{
+    
+  }
+}

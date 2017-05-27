@@ -1,0 +1,56 @@
+body,html {
+	margin: 2% 6%;
+}
+
+html {
+	background-color: #232438;
+}
+
+body {
+	border: 10px solid #817f69;
+    padding: 3%;
+    background-color: #d5d2ba;
+}
+
+#navigation {  
+    width: 130px;  
+    z-index: 1;  
+    left: 5px;  
+    visibility: visible;  
+    position:fixed;  
+    top: 120px;  
+    border: 2px solid #ffffff; 
+    background-color: #2b2a0c; 
+}  
+
+#navigation a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+#navigation > ul{
+	list-style-image: url("../images/nav_1.jpg");
+	padding: 1px;
+}
+
+
+p {
+	text-indent: 2em;
+}
+
+#colee_left,#colee_right {
+	overflow: hidden;
+}
+
+#colee_left img {
+	height: 150px;
+}
+
+#colee_right img {
+	height: 150px;
+}
